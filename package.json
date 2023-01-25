@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Para iniciar um aplicativo node precisamos configurar suas dependências.<br>\r O objetivo desse exercício é justamente isso:\r - criar o package.json\r - personalizar as configurações\r - criar scripts",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "tsc && node ./build/database.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/landrozz/node-package-json/issues"
   },
-  "homepage": "https://github.com/landrozz/node-package-json#readme"
+  "homepage": "https://github.com/landrozz/node-package-json#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "@types/node":"18.11.18"
+  }
 }
