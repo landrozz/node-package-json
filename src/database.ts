@@ -43,57 +43,12 @@ export const purchases:TPurchase[] = [
     } 
 ]
 
-export function createUser(id:string, email:string, password:string){
-    const newUser = {
-        id,
-        email,
-        password
-    }
-    users.push(newUser)
-    console.log("Cadastro realizado com sucesso")
-} 
-
-export function getAllUsers(){
-  return console.log(users)
-}
-
-export function createProduct(id:string,name:string,price:number,category:SHOP_CATEGORIES){
-    const newProduct = {
-        id,
-        name,
-        price,
-        category
-    }
-    products.push(newProduct)
-    console.log("Produto criado com sucesso")
-
-}
-
-export function getAllProducts(){
-    return console.log(products)
-  }
-
 export function getProductById(idToSearch:string){
     const produtoSelecionado = products.find(item => item.id === idToSearch)
     return produtoSelecionado
 }
 
-export function queryProductsByName(q:string){
-    return products.filter((item) => 
-    item.name.toLowerCase().includes(q.toLowerCase())
-    )    
-}
 
-export function createPurchase(userId:string, productId:string,quantity:number,totalPrice:number){
-    const newPurchase = {
-        userId,
-        productId,
-        quantity,
-        totalPrice
-    }
-    purchases.push(newPurchase)
-    console.log("Compra realizada com sucesso")
-}
 
 export function getAllPurchasesFromUserId(userIdToSearch:string){
     return purchases.filter((item) => 
