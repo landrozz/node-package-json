@@ -42,16 +42,3 @@ export const purchases:TPurchase[] = [
         totalPrice: 2 * 3500 
     } 
 ]
-
-export function getProductById(idToSearch:string){
-    const produtoSelecionado = products.find(item => item.id === idToSearch)
-    return produtoSelecionado
-}
-
-
-
-export function getAllPurchasesFromUserId(userIdToSearch:string){
-    return purchases.filter((item) => 
-    item.userId.toLowerCase() === userIdToSearch
-    )
-}
